@@ -1,193 +1,271 @@
-<html>
-<style>
-@import "compass/css3";
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Megan</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.6.95/css/materialdesignicons.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script>document.documentElement.className = 'js';</script>
+    </head>
+    <body class="loading">
+        <main>
+            <header class="header">
+                <h1 class="header__title"><img src="img/CWC.jpg"/></h1>
+                <h2 class="header-mobmenu"><i class="mdi mdi-menu"></i>MENU</h2>
+            </header>
+            <aside class="main-menu">
 
-//vars
-$fg:#00bcd4;
-$bg:#673ab7;
-$pi:3.14;
+                <nav>
+                    <h1><a href="javascript:void(0)"><i class="mdi mdi-close"></i></a>MENU</h1>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="content content--side">
+                <div class="control control--grids">
+                    <span class="control__title">switch layout</span>
+                    <div class="control__item">
+                        <input class="control__radio" type="radio" name="grid-type" value="grid--type-a" id="control-grid-a" checked>
+                        <label class="control__label" for="control-grid-a">grid A</label>
+                    </div>
+                    <div class="control__item">
+                        <input class="control__radio" type="radio" name="grid-type" value="grid--type-b" id="control-grid-b">
+                        <label class="control__label" for="control-grid-b">grid B</label>
+                    </div>
+                    <div class="control__item">
+                        <input class="control__radio" type="radio" name="grid-type" value="grid--type-c" id="control-grid-c">
+                        <label class="control__label" for="control-grid-c">grid C</label>
+                    </div>
+                </div>	
+            </div>
+            <div class="content content--side content--right">
+                <div class="control control--effects">
+                    <span class="control__title">run effect</span>
+                    <button class="control__btn" data-fx="Hapi">Hapi</button>
+                    <button class="control__btn" data-fx="Amun">Amun</button>
+                    <button class="control__btn" data-fx="Kek">Kek</button>
+                    <button class="control__btn" data-fx="Isis">Isis</button>
+                    <button class="control__btn" data-fx="Montu">Montu</button>
+                    <button class="control__btn" data-fx="Osiris">Osiris</button>
+                    <button class="control__btn" data-fx="Satet">Satet</button>
+                    <button class="control__btn" data-fx="Atum">Atum</button>
+                    <button class="control__btn" data-fx="Ra">Ra</button>
+                    <button class="control__btn" data-fx="Sobek">Sobek</button>
+                    <button class="control__btn" data-fx="Ptah">Ptah</button>
+                    <button class="control__btn" data-fx="Bes">Bes</button>
+                    <button class="control__btn" data-fx="Seker">Seker</button>
+                    <button class="control__btn" data-fx="Nut">Nut</button>
+                    <button class="control__btn" data-fx="Shu">Shu</button>
+                </div>
+            </div>
+            <div class="content content--center">
+                <div class="grid grid--type-a">
+                    <div class="grid__sizer"></div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/1.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/3.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/5.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/7.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/9.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/10.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/11.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/10.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/1.jpg" alt="Some image" /></a>
+                    </div>
+                </div>
+                <div class="grid grid--type-b">
+                    <div class="grid__sizer"></div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/11.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/5.jpg" alt="Some image" /></a>
+                    </div>
 
-//config
-$menu-items:4;
-$open-distance:105px;
-$opening-angle:$pi*2;
-
-body{
-background:$bg;
-color:white;
-      text-align:center;
-}
-a{
-color:inherit;
-}
-h1, h2, h3, h4{
-margin:0;
-       margin-bottom:10px;
-       margin-top:10px;
-}
-h1{
-    font-size:3em;
-}
-%goo{
-filter:url('#shadowed-goo');
-       // debug 
-       //background:rgba(255,0,0,0.2);
-}
-%ball{
-background:$fg;
-           border-radius:100%;
-width:80px;
-height:80px;
-       margin-left:-40px;
-position:absolute;
-top:20px;
-color:white;
-      text-align:center;
-      line-height:80px;
-transform:translate3d(0,0,0);
-transition:transform ease-out 200ms;
-}
-.menu-open{
-display:none;
-}
-.menu-item{
-    @extend %ball;
-}
-.hamburger{
-    $width:25px;
-    $height:3px;
-width:$width;
-height:$height;
-background:white;
-display:block;
-position:absolute;
-top:50%;
-left:50%;
-     margin-left:-$width/2;
-     margin-top:-$height/2;
-transition:transform 200ms;
-}
-$hamburger-spacing:8px;
-.hamburger-1{
-transform:translate3d(0,-$hamburger-spacing,0);
-}
-.hamburger-2{
-transform:translate3d(0,0,0);
-}
-.hamburger-3{
-transform:translate3d(0,$hamburger-spacing,0);
-}
-.menu-open:checked+.menu-open-button{
-    .hamburger-1{
-transform:translate3d(0,0,0) rotate(45deg); 
-    }
-    .hamburger-2{
-transform:translate3d(0,0,0) scale(0.1,1);
-    }
-    .hamburger-3{
-transform:translate3d(0,0,0) rotate(-45deg); 
-    }
-}
-.menu{
-    @extend %goo;
-    $width:650px;
-    $height:150px;
-position:absolute;
-left:50%;
-     margin-left:-80px;
-     padding-top:20px;
-     padding-left:80px;
-width:$width;
-height:$height;
-       box-sizing:border-box;
-       font-size:20px;
-       text-align:left;
-}
-
-
-.menu-item{
-    &:hover{
-background:white;
-color:$fg;
-    }
-    @for $i from 1 through $menu-items{
-        &:nth-child(#{$i+2}){
-            transition-duration:180ms;
-        }
-    }
-}
-
-.menu-open-button{
-    @extend %ball;
-    z-index:2;
-    transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-    transition-duration:400ms;
-transform:scale(1.1,1.1) translate3d(0,0,0);
-cursor:pointer;
-}
-.menu-open-button:hover{
-transform:scale(1.2,1.2) translate3d(0,0,0);
-}
-.menu-open:checked+.menu-open-button{
-    transition-timing-function:linear;
-    transition-duration:200ms;
-transform:scale(0.8,0.8) translate3d(0,0,0);
-}
-
-.menu-open:checked~.menu-item{
-    transition-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
-    @for $i from 1 through $menu-items{
-
-        &:nth-child(#{$i+2}){
-            transition-duration:90ms+(100ms*$i);
-transform:translate3d(110px*$i,0,0);
-        }
-    }
-}
-
-</style>
-
-<h1>Gooey Menu</h1>
-<h2>Using CSS and SVG Filters</h2>
-<h3>By <a href="https://codepen.io/lbebber">Lucas Bebber</a></h3>
-<h4><a href="https://codepen.io/lbebber/pen/LELBEo" target="_blank">Version 1</a> - <a href="https://codepen.io/lbebber/pen/RNgBPP" target="_blank">Version 2</a> - Version 3 - <a href="https://codepen.io/lbebber/pen/rawQKR" target="_blank">Version 4</a></h4>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-<nav class="menu">
-<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-<label class="menu-open-button" for="menu-open">
-<span class="hamburger hamburger-1"></span>
-<span class="hamburger hamburger-2"></span>
-<span class="hamburger hamburger-3"></span>
-</label>
-
-<a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-<a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-
-
-</nav>
-
-
-<!-- filters -->
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-<defs>
-<filter id="shadowed-goo">
-
-<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-<feOffset in="shadow" dx="1" dy="1" result="shadow" />
-<feComposite in2="shadow" in="goo" result="goo" />
-<feComposite in2="goo" in="SourceGraphic" result="mix" />
-</filter>
-<filter id="goo">
-<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-<feComposite in2="goo" in="SourceGraphic" result="mix" />
-</filter>
-</defs>
-</svg>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/1.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/7.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/5.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/3.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/5.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/7.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/1.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/3.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/5.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/7.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set1/11.jpg" alt="Some image" /></a>
+                    </div>
+                </div>
+                <div class="grid grid--type-c">
+                    <div class="grid__sizer"></div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/1.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/3.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/5.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/10.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/11.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/7.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/9.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/2.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/4.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/6.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/8.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/10.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/1.jpg" alt="Some image" /></a>
+                    </div>
+                    <div class="grid__item">
+                        <a class="grid__link" href="#"><img class="grid__img" src="img/set3/2.jpg" alt="Some image" /></a>
+                    </div>
+                </div>
+            </div>
+            <section class="content content--related">
+                <p class="media-related"><a href="">LINK</a></p>
+                <p class="media-related">Lorem Ipsum is simply dummy text of the printing <br/>and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                <p class="media-related">
+                    <a href="https://www.facebook.com/ChennaiWeekendClickers/">Facebook</a> |
+                    <a href="http://www.twitter.com">Flickr</a>
+                </p>
+            </section>
+        </main>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
