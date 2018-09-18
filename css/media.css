@@ -1,0 +1,116 @@
+@media only screen and (max-width:900px) {
+    .container {
+        width: 100%;
+    }
+
+    .menu .mobmenu {
+        display: block;
+    }
+
+    .menu ul {
+        display: none;
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        z-index: 9999;
+        overflow-y: auto;
+
+    }
+
+    .menu ul li {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .closemenu{
+        display: block;
+    }
+    .bannercwc {
+        width: 100%;
+
+    }
+
+    .upevent {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .eventsdet,
+    .banner {
+        width: 100%;
+        height: unset;
+    }
+
+    .aboutimg {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .aboutmsg {
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .eventcard {
+        width: 80%;
+        margin: 10%;
+    }
+
+    .vidoemain,
+    .videolst {
+        width: 96%;
+        margin: 2%;
+    }
+
+    .listplay {
+        height: 150px;
+    }
+
+    .mainplay {
+        width: 100%;
+    }
+
+    .bigtitund h1 {
+        width: 96%;
+        margin: 0 2% 25px;
+    }
+
+    .forminput input {
+        width: 100%;
+        margin: 2% 0 !important;
+    }
+
+    .discuslist {
+        width: 96%;
+        margin: 1% 2%;
+    }
+
+    .dismsg {
+        width: 100%;
+    }
+
+    .disaut {
+        width: 60%;
+        margin: 2% 0;
+
+    }
+
+    .distim {
+        width: 40%;
+        margin: 2% 0;
+    }
+    .adddisbtn{
+        width:96%;
+        margin:1% 2%;
+    }
+    .introboxinr, .introboxinr:first-child, .introboxinr:last-child{
+        width:46%;
+        margin: 2%;
+    }
+
+}
