@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        CWC - Chennaiweekendclickers
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/media.css" rel="stylesheet" />
+    <link href="../css/form.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
+    <script type="text/javascript" src="../js/cwccomponents.js"></script>
+    <script type="text/javascript" src="../js/cwchashloader.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" />
+                </div>
+                <div class="menu">
+                    <a hreef="javascript:void(0)" class="mobmenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <ul>
+                        <div class="closemenu">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="Gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="Discussions.html">Discussions</a>
+                        </li>
+                        <li>
+                            <a href="Tutorial.html">Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="About.html">About</a>
+                        </li>
+                        <li class="join">
+                            <a href="http://">Join</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bigtitund mt20px">
+        <div class="container">
+            <h1><span>Gallery</span></h1>
+            <div class="gallery" id="galTabMainCont">
+
+            </div>
+        </div>
+    </section>
+    <section class="adddisbtn mb40px" id="loadMoreImg">
+        <div class="container">
+            <a href="javascript:void(0)">Load More Photos</a>
+        </div>
+    </section>
+
+    <script type="text/template" id="galleryTemp">
+      <div class="eventcard" id="gal_{{photo.id}}">
+        <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
+        <div class="eventtitle">
+          <div class="profilnam ">
+              <h3>{{photo.(dateadded)}}</h3>
+              <h4>by {{photo.ownername}}</h4>
+          </div>
+        </div>
+        <div class="eventdesc">
+            <p>{{photo.title}}</p>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/javascript">
+          window.onload = function(){
+            var uri = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=93ea6dcf26a117a857f809036b0a8602&group_id=1217703@N22&nojsoncallback=1&page=1&format=json&per_page=20";
+            cwc.sendReq(uri,"get",null,function(response){cwc.galleryLoader(response);});
+          }
+    </script>
+
+</body>
+
+</html>
