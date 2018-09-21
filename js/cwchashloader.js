@@ -10,7 +10,6 @@ var cwcHashLoader = {
     onLoad : function(){
         var hash = window.location.hash.split("#")[1];
         var obj = cwcHashLoader.urls[hash];
-        console.log("obj:::",obj);
     }
 
 }

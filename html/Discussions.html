@@ -23,7 +23,7 @@
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="../images/logo.png" />
+                    <img src="../images/cwclogo.svg" />
                 </div>
                 <div class="menu">
                     <a hreef="javascript:void(0)" class="mobmenu">
@@ -42,17 +42,17 @@
                         <li>
                             <a href="Gallery.html">Gallery</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="Discussions.html">Discussions</a>
                         </li>
                         <li>
                             <a href="Tutorial.html">Tutorials</a>
                         </li>
                         <li>
-                            <a href="About.html">About</a>
+                            <a href="https://www.flickr.com/groups/1217703@N22/">About</a>
                         </li>
                         <li class="join">
-                            <a href="http://">Join</a>
+                            <a href="https://www.flickr.com/groups/1217703@N22/">Join</a>
                         </li>
                     </ul>
                 </div>
@@ -70,124 +70,22 @@
     </section>
     <section class="adddisbtn">
         <div class="container">
-            <a href="javascript:void(0)">Add Discussions</a>
+            <a href="https://www.flickr.com/groups_newtopic.gne?id=1217703@N22" target="_blank">Add Discussions</a>
         </div>
     </section>
     <section class="discuslist">
         <div class="container">
-            <ul>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dismsg left">
-                        <h3>REVIEW | CWC671</h3>
-                        <p>Besant Nagar | Walk and discussion on CWC9 | 02-09-2018 | Sunday</p>
-                    </div>
-                    <div class="disaut left">
-                        <div class="profilimg">
-                            <img src="../images/profile.png" />
-                        </div>
-                        <div class="profilnam ">
-                            <h3>Author</h3>
-                            <h4>Nikijackson</h4>
-                        </div>
-                    </div>
-                    <div class="distim left">
-                        <span>2 days ago</span>
-                    </div>
-                </li>
+            <ul id="discussMainCont">
+
             </ul>
         </div>
     </section>
-    <section class="contactform">
+    <section class="adddisbtn" id="loadMoreDisc">
+        <div class="container">
+            <a href="javascript:void(0)">Load More...</a>
+        </div>
+    </section>
+    <section class="contactform mt20px">
         <div class="container">
             <h1>Write to us</h1>
             <!-- <form>
@@ -247,29 +145,13 @@
         </div>
         </div>
         <div class="container">
-            <p>Chennaiweekendclickers 2018</p>
+            <p id="footerCont"></p>
+            <ul>
+              <li><a href="#"><img src="../images/facebook.svg"/></a></li>
+              <li><a href="#"><img src="../images/twitter.svg"/></a></li>
+              <li><a href="#"><img src="../images/flickr.svg"/></a></li>
+            </ul>
         </div>
-
-        <script type="text/template" id="discussTemp">
-          <li>
-              <div class="dismsg left">
-                  <h3>REVIEW | CWC671</h3>
-                  <p>{{subject}} | Walk and discussion on CWC9 | {{date}}</p>
-              </div>
-              <div class="disaut left">
-                  <div class="profilimg">
-                      <img src="../images/profile.png">
-                  </div>
-                  <div class="profilnam ">
-                      <h3>Author</h3>
-                      <h4>{{authorname}}</h4>
-                  </div>
-              </div>
-              <div class="distim left">
-                  <span>2 days ago</span>
-              </div>
-          </li>
-        </script>
     </section>
 
     <script type="text/template" id="stickyNoteTemp">
@@ -282,20 +164,43 @@
           <h2>{{subjectMes}}</h2>
           <div class="probtm">
               <div class="profilimg">
-                  <img src="../images/profile.png">
+                  <img src="https://farm{{iconfarm}}.staticflickr.com/{{iconserver}}/buddyicons/{{authorId}}.jpg">
               </div>
               <div class="profilnam">
-                  <h3>Author</h3>
                   <h4>{{author}}</h4>
+                  <h3>{{role}}</h3>
               </div>
           </div>
       </div>
+    </script>
+
+    <script type="text/template" id="discussTemp">
+      <li>
+          <div class="disaut left">
+              <div class="profilimg">
+                  <img src="https://farm{{iconfarm}}.staticflickr.com/{{iconserver}}/buddyicons/{{authorId}}.jpg">
+              </div>
+              <div class="profilnam ">
+                  <h4>{{authorname}}</h4>
+                  <h3>{{role}}</h3>
+              </div>
+          </div>
+          <div class="dismsg left">
+              <h3>{{subject}}</h3>
+          </div>
+          <div class="distim left" onclick="cwc.showAndHide('#mess_{{id}}');">
+              <span>Read Story ...</span>
+          </div>
+          <div class="disccomt" id="mess_{{id}}" style="display: none;">{{message}}</div>
+      </li>
     </script>
 
     <script type="text/javascript">
           window.onload = function(){
             var uri = "https://api.flickr.com/services/rest/?method=flickr.groups.discuss.topics.getList&api_key=93ea6dcf26a117a857f809036b0a8602&group_id=1217703%40N22&per_page=20&page=1&format=json&nojsoncallback=1";
             cwc.sendReq(uri,"get",null,function(response){cwc.discussionLoader(response);});
+            req = null;
+            document.getElementById("footerCont").innerHTML = "Chennaiweekendclickers "+new Date().getFullYear();
           }
     </script>
 </body>

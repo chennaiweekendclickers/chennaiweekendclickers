@@ -2,6 +2,7 @@
 var nextreq = 1;
 var nextpage = 0;
 var req = null;
+var lasetApdId = "galImgLoader1";
 
 var cwc = {
 
@@ -32,7 +33,6 @@ templateIteration : function(nameOfObj,itrObj,parentId,tempId)
 				var val = "";
 				if(spLists[i].split("}}")[0].includes("(")){
 					val = singleObj[spLists[i].split("}}")[0].replace(/[()]/g,"")];
-					console.log("val::::",val);
 					val = new Date(parseInt(val)).toDateString();
 				}else{
 					val = singleObj[spLists[i].split("}}")[0]];
@@ -161,7 +161,6 @@ removeClass : function(eleId,clsName){
 //Get more data when page riched bottom
 moreData : function(uri,page,start,loadEleId,params,callback)
 {
-	req = null;
 	if(uri != null && uri != "" && uri != undefined && uri != "null")
 	{
 		$(loadEleId).unbind("click");
@@ -179,7 +178,7 @@ moreData : function(uri,page,start,loadEleId,params,callback)
 						if(uri.includes("getPhotos")){
 							nextreq = response.photos.photo.length;
 						}else if(uri.includes("discuss")){ //No I18N
-							nextreq = response.topics.topic;
+							nextreq = response.topics.topic.length;
 						}
 						if(response.stat.toLowerCase() == "ok")
 						{
@@ -209,7 +208,7 @@ moreData : function(uri,page,start,loadEleId,params,callback)
 							if(uri.includes("getPhotos")){
 								nextreq = response.photos.photo.length;
 							}else if(uri.includes("discuss")){ //No I18N
-								nextreq = response.topics.topic;
+								nextreq = response.topics.topic.length;
 							}
 							if(response.stat.toLowerCase() == "ok")
 							{
@@ -272,7 +271,27 @@ homeGalleryLoader : function(res)
 		if(res.stat == "ok")
 		{
 			var photos = res.photos.photo;
-			cwc.templateIteration("photo",photos,"gallery-mainContainer","galleryTemp");
+			for(var i=0;i<photos.length;i++)
+			{
+				var siglnObj = photos[i];
+				var galTemp = document.getElementById("galleryTemp").innerHTML;
+				galTemp = galTemp.replace(/{{farm}}/g,siglnObj.farm);
+				galTemp = galTemp.replace(/{{server}}/g,siglnObj.server);
+				galTemp = galTemp.replace(/{{id}}/g,siglnObj.id);
+				galTemp = galTemp.replace(/{{secret}}/g,siglnObj.secret);
+				galTemp = galTemp.replace(/{{ownername}}/g,siglnObj.ownername);
+				galTemp = galTemp.replace(/{{title}}/g,siglnObj.title);
+				var div = document.createElement("div");
+				div.innerHTML = galTemp;
+				document.getElementById(lasetApdId).appendChild(div.children[0]);
+				if(lasetApdId == "galImgLoader1"){
+					lasetApdId = "galImgLoader2";
+				}else if(lasetApdId == "galImgLoader2"){
+					lasetApdId = "galImgLoader3";
+				}else if(lasetApdId == "galImgLoader3"){
+					lasetApdId = "galImgLoader1";
+				}
+			}
 		}
 },
 //Gallery page load iterations ends.
@@ -283,10 +302,10 @@ galleryLoader : function(res)
 		if(res.stat == "ok")
 		{
 			var photos = res.photos.photo;
-			cwc.templateIteration("photo",photos,"galTabMainCont","galleryTemp");
+			cwc.homeGalleryLoader(res);
 			if(Object.keys(photos).length >= 20){
 					var uri = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=93ea6dcf26a117a857f809036b0a8602&group_id=1217703@N22&nojsoncallback=1&format=json&per_page=20";
-					cwc.moreData(uri,2,1,"#loadMoreImg",null,function(response){cwc.templateIteration("photo",response.photos.photo,"galTabMainCont","galleryTemp")});
+					cwc.moreData(uri,2,1,"#loadMoreImg",null,function(response){cwc.homeGalleryLoader(response)});
 			}
 		}
 },
@@ -304,12 +323,36 @@ discussionLoader : function(res)
 					if(discObj.is_sticky == "1")
 					{
 						var stikyTemp = document.getElementById("stickyNoteTemp").innerHTML;
-						stikyTemp = stikyTemp.replace(/{{subjectMes}}/,discObj.subject);
-						stikyTemp = stikyTemp.replace(/{{author}}/,discObj.authorname);
+						stikyTemp = stikyTemp.replace(/{{subjectMes}}/g,discObj.subject);
+						stikyTemp = stikyTemp.replace(/{{author}}/g,discObj.authorname);
+						stikyTemp = stikyTemp.replace(/{{iconfarm}}/g,discObj.iconfarm);
+						stikyTemp = stikyTemp.replace(/{{iconserver}}/g,discObj.iconserver);
+						stikyTemp = stikyTemp.replace(/{{authorId}}/g,discObj.author);
+						stikyTemp = stikyTemp.replace(/{{role}}/g,discObj.role);
+						stikyTemp = stikyTemp.replace(/{{id}}/g,discObj.id);
 						var div = document.createElement("div");
 						div.innerHTML = stikyTemp;
 						document.getElementById("stickyMainCont").appendChild(div.children[0]);
 					}
+					else {
+						var discusTemp = document.getElementById("discussTemp").innerHTML;
+						discusTemp = discusTemp.replace(/{{authorname}}/g,discObj.authorname);
+						discusTemp = discusTemp.replace(/{{subject}}/g,discObj.subject);
+						discusTemp = discusTemp.replace(/{{message}}/g,discObj.message._content);
+						discusTemp = discusTemp.replace(/{{iconfarm}}/g,discObj.iconfarm);
+						discusTemp = discusTemp.replace(/{{iconserver}}/g,discObj.iconserver);
+						discusTemp = discusTemp.replace(/{{authorId}}/g,discObj.author);
+						discusTemp = discusTemp.replace(/{{role}}/g,discObj.role);
+						discusTemp = discusTemp.replace(/{{id}}/g,discObj.id);
+						var div = document.createElement("div");
+						div.innerHTML = discusTemp;
+						document.getElementById("discussMainCont").appendChild(div.children[0]);
+					}
+			}
+			if(Object.keys(discussObj).length >= 20)
+			{
+				var uri = "https://api.flickr.com/services/rest/?method=flickr.groups.discuss.topics.getList&api_key=93ea6dcf26a117a857f809036b0a8602&group_id=1217703%40N22&per_page=20&format=json&nojsoncallback=1";
+				cwc.moreData(uri,2,1,"#loadMoreDisc",null,function(response){cwc.discussionLoader(response);});
 			}
 		}
 }

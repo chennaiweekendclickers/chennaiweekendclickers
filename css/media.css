@@ -26,9 +26,11 @@
         padding: 20px;
         box-sizing: border-box;
     }
-    .closemenu{
+
+    .closemenu {
         display: block;
     }
+
     .bannercwc {
         width: 100%;
 
@@ -76,8 +78,8 @@
     }
 
     .bigtitund h1 {
-        width: 96%;
-        margin: 0 2% 25px;
+        width: 98%;
+        margin: 0 1% 25px;
     }
 
     .forminput input {
@@ -92,6 +94,12 @@
 
     .dismsg {
         width: 100%;
+        margin: 1% 0 0;
+    }
+
+    .disccomt {
+        width: 100%;
+        margin: 1% 0;
     }
 
     .disaut {
@@ -104,13 +112,37 @@
         width: 40%;
         margin: 2% 0;
     }
-    .adddisbtn{
-        width:96%;
-        margin:1% 2%;
-    }
-    .introboxinr, .introboxinr:first-child, .introboxinr:last-child{
-        width:46%;
-        margin: 2%;
+
+    .adddisbtn {
+        width: 96%;
+        margin: 1% 2%;
     }
 
+    .introboxinr,
+    .introboxinr:first-child,
+    .introboxinr:last-child {
+        width: 46%;
+        margin: 2%;
+    }
+    .zf-tempFrmWrapper,.zf-fmFooter {
+        width:100%;
+        box-sizing: border-box;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .gallerycol {
+        -ms-flex: 49%;
+        flex: 49%;
+        max-width: 48.4%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallerycol {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }

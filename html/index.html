@@ -23,7 +23,7 @@
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="../images/logo.png" />
+                    <img src="../images/cwclogo.svg" />
                 </div>
                 <div class="menu">
                     <a href="javascript:void(0)" class="mobmenu">
@@ -36,7 +36,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <li>
+                        <li class="active">
                             <a href="index.html">Home</a>
                         </li>
                         <li>
@@ -49,10 +49,10 @@
                             <a href="Tutorial.html">Tutorials</a>
                         </li>
                         <li>
-                            <a href="About.html">About</a>
+                            <a href="https://www.flickr.com/groups/1217703@N22/">About</a>
                         </li>
                         <li class="join">
-                            <a href="http://">Join</a>
+                            <a href="https://www.flickr.com/groups/1217703@N22/">Join</a>
                         </li>
                     </ul>
                 </div>
@@ -129,8 +129,10 @@
     <section class="events mt20px">
         <div class="container">
             <h1><span>Gallery</span></h1>
-            <div class="gallery" id="gallery-mainContainer">
-
+            <div class="gallery">
+                <div class="gallerycol" id="galImgLoader1"></div>
+                <div class="gallerycol" id="galImgLoader2"></div>
+                <div class="gallerycol" id="galImgLoader3"></div>
             </div>
         </div>
         <div class="container">
@@ -248,22 +250,24 @@
             </script>
         </div>
         <div class="container">
-            <p>Chennaiweekendclickers 2018</p>
+            <p id="footerCont"></p>
+            <ul>
+              <li><a href="#"><img src="../images/facebook.svg"/></a></li>
+              <li><a href="#"><img src="../images/twitter.svg"/></a></li>
+              <li><a href="#"><img src="../images/flickr.svg"/></a></li>
+            </ul>
         </div>
 
     </section>
 
     <script type="text/template" id="galleryTemp">
-      <div class="eventcard" id="gal_{{photo.id}}">
-        <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
-        <div class="eventtitle">
-          <div class="profilnam ">
-              <h3>{{photo.(dateadded)}}</h3>
-              <h4>by {{photo.ownername}}</h4>
-          </div>
+      <div class="gallrycrd">
+        <img src="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}.jpg">
+        <div class="gallaryname">
+            <h2>by {{ownername}}</h2>
         </div>
         <div class="eventdesc">
-            <p>{{photo.title}}</p>
+            <p>{{title}}</p>
         </div>
       </div>
     </script>
@@ -272,6 +276,7 @@
           window.onload = function(){
             var uri = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=93ea6dcf26a117a857f809036b0a8602&group_id=1217703@N22&nojsoncallback=1&page=1&format=json&per_page=20";
             cwc.sendReq(uri,"get",null,function(response){cwc.homeGalleryLoader(response);});
+            document.getElementById("footerCont").innerHTML = "Chennaiweekendclickers "+new Date().getFullYear();
           }
     </script>
 </body>
